@@ -7,5 +7,6 @@ public class Controller {
     GameField gpGameField;
     public void initialize(){
         gpGameField.createGameField(10,20);
+        System.out.println("test");
     }
 }
