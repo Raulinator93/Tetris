@@ -8,5 +8,6 @@ public class Controller {
     public void initialize(){
         gpGameField.createGameField(10,20);
         System.out.println("test");
+        //test
     }
 }
