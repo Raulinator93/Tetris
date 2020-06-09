@@ -9,5 +9,6 @@ public class Controller {
         gpGameField.createGameField(10,20);
         System.out.println("test");
         //test
+        System.out.println("gehts jz endlich");
     }
 }
