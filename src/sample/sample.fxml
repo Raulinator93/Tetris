@@ -2,10 +2,26 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import sample.*?>
 
-<?import sample.GameField?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
-    <center>
-        <GameField fx:id="gpGameField"/>
-    </center>
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <center>
+      <GameField fx:id="gpGameField" />
+  </center>
+   <left>
+      <AnchorPane minHeight="620.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label graphicTextGap="5.0" layoutX="66.0" layoutY="81.0" text="Score:">
+               <font>
+                  <Font name="FontAwesome Regular" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbScore" layoutX="61.0" layoutY="124.0" text="000">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </left>
 </BorderPane>
