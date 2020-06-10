@@ -17,7 +17,7 @@
                   <Font name="FontAwesome Regular" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lbScore" layoutX="61.0" layoutY="124.0" text="000">
+            <Label fx:id="lbScore" alignment="CENTER" layoutX="23.0" layoutY="123.0" prefHeight="102.0" prefWidth="155.0" text="000">
                <font>
                   <Font size="48.0" />
                </font>
