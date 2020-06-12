@@ -1,8 +1,6 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import sample.Shapes.*;
@@ -11,7 +9,6 @@ import java.util.Random;
 import java.util.concurrent.*;
 
 public class Controller {
-    public Label lbScore;
     @FXML GameField gpGameField;
     private ScheduledExecutorService scheduledExecutorService;
     private int yoffset;
@@ -21,10 +18,9 @@ public class Controller {
     private int timeDelay = 1000;
     private Shape shape;
 
-    private Score score;
+    @FXML Score lbScore;
 
     public void initialize() {
-        score = new Score(lbScore);
 
         Runnable gameTick = () -> {
             gpGameField.deleteShape(shape, xoffset, yoffset);
@@ -33,7 +29,7 @@ public class Controller {
                 shape = getRandomShape();
                 yoffset = shape.getHeight() - 1;
                 xoffset = (cols - shape.getWidth()) / 2;
-                gpGameField.removeFullLines();
+                lbScore.getScoreRemovedLines(gpGameField.removeFullLines());
             } else {
                 yoffset++;
             }
@@ -86,7 +82,7 @@ public class Controller {
                     scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
                     scheduledExecutorService.scheduleAtFixedRate(gameTick, timeDelay, timeDelay, TimeUnit.MILLISECONDS);
                 }
-                score.addToScore();
+                lbScore.addToScore();
             }
 
         });

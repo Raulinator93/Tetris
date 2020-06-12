@@ -95,7 +95,8 @@ public class GameField extends GridPane {
         }
     }
 
-    public void removeFullLines() {
+    public int removeFullLines() {
+        int fullLines=0;
         for (int j = 0; j < gameField[0].length; j++) {
             boolean isEmpty = false;
             for (int i = 0; i < gameField.length && !isEmpty; i++) {
@@ -107,7 +108,9 @@ public class GameField extends GridPane {
                         gameField[i][j].setBackground(gameField[i][j - 1].getBackground());
                     }
                 }
+                fullLines++;
             }
         }
+        return fullLines;
     }
 }

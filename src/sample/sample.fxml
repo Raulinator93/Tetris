@@ -17,11 +17,8 @@
                   <Font name="FontAwesome Regular" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lbScore" alignment="CENTER" layoutX="23.0" layoutY="123.0" prefHeight="102.0" prefWidth="155.0" text="000">
-               <font>
-                  <Font size="48.0" />
-               </font>
-            </Label>
+            <Score fx:id="lbScore" alignment="CENTER" layoutX="23.0" layoutY="123.0" prefHeight="102.0" prefWidth="155.0" text="000">
+            </Score>
          </children></AnchorPane>
    </left>
 </BorderPane>
